@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="D:/Cosas/DANAIDE prueba/Core/Core.csproj" />
-  <Project Path="D:/Cosas/DANAIDE prueba/GabrielScarafia/Api.csproj" />
+  <Project Path="../Core/Core.csproj" />
+  <Project Path="Api.csproj" />
 </Solution>
