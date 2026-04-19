@@ -1,0 +1,298 @@
+{
+  "info": {
+    "_postman_id": "8e241059-19ae-4b75-b692-b5d9f0ba8a52",
+    "name": "Danaide",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16307116"
+  },
+  "item": [
+    {
+      "name": "Debug",
+      "item": [
+        {
+          "name": "Tablas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}/debug/tablas",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "debug",
+                "tablas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Tabla/Usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}/debug/tabla/usuarios",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "debug",
+                "tabla",
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Tabla/Productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}/debug/tabla/productos",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "debug",
+                "tabla",
+                "productos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Tabla/Carros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}/debug/tabla/carros",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "debug",
+                "tabla",
+                "carros"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Tabla/CarroItems",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}/debug/tabla/CarroItems",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "debug",
+                "tabla",
+                "CarroItems"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Carro",
+      "item": [
+        {
+          "name": "Carro",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"Dni\":\"42155265\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}/api/Carro",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "api",
+                "Carro"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Carro",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}/api/Carro/12",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "api",
+                "Carro",
+                "12"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "productos",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"IdProducto\": 18\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL}}/api/Carro/12/productos",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "api",
+                "Carro",
+                "12",
+                "productos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "productos",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{URL}}/api/Carro/12/productos/20",
+              "host": [
+                "{{URL}}"
+              ],
+              "path": [
+                "api",
+                "Carro",
+                "12",
+                "productos",
+                "20"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "productos/mas-caros",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"Dni\":\"42155265\"\r\n}"
+        },
+        "url": {
+          "raw": "{{URL}}/api/compras/productos/mas-caros/42155265",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "api",
+            "compras",
+            "productos",
+            "mas-caros",
+            "42155265"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "URL",
+      "value": ""
+    }
+  ]
+}
